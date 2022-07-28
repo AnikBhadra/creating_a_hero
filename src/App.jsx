@@ -1,6 +1,14 @@
+import React, { useState } from 'react'
 import './App.css'
 
 function App() {
+
+  const [name, setName] = useState("anik")
+
+
+  const changeName = () => {
+    setName("Bhadra")
+  }
 
   return (
     <div >
@@ -16,6 +24,9 @@ function App() {
 
       <label>SuperPower:</label>
       <input type="text" style={{ margin: 10 }} />
+
+      <button onClick={changeName}>change name</button>
+      {name}
     </div>
   )
 }
